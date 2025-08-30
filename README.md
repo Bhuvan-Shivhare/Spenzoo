@@ -99,3 +99,42 @@ Spenzo uses a PostgreSQL database with Prisma ORM. Here's a brief overview:
 git clone https://github.com/WaliKhan09/spenzo.git
 cd spenzo
 npm install
+
+
+# DB
+DATABASE_URL=postgresql://username:password@localhost:5432/spenzo
+
+# Clerk Auth
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=...
+CLERK_SECRET_KEY=...
+
+# Google AI
+GEMINI_API_KEY=...
+
+# Email
+RESEND_API_KEY=...
+
+# ArcJet
+ARCJET_KEY=...
+
+# Inngest
+INNGEST_EVENT_KEY=...
+INNGEST_SIGNING_KEY=...
+
+
+npx prisma generate
+npx prisma db push
+npm run seed
+
+spenzo/
+├── app/                  # Routes & Pages
+│   ├── (auth)/           # Auth screens
+│   ├── (main)/           # Dashboard & features
+│   └── api/              # API routes
+├── components/           # UI components
+├── lib/                  # Utility & helper functions
+├── prisma/               # Database models
+├── actions/              # Server actions
+├── emails/               # Email templates
+├── public/               # Static assets
+
